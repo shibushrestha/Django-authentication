@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 500px;
+	width: 450px;
+    padding: 20px;
+	margin: 50px auto;
+	background-color: rgba(0, 0, 0, 0.7);
+	border: 1px solid black;
+	border-radius: 20px;
+
+}
+
+.h-style{
+	text-align: center;
+	font-family: Andale Mono, monospace;
+	color: orange;
+	
+}
+
+.bg-image{
+	background-image: url('form_image2.jpg');
+	background-size: cover;
+	}
+
+input {
+	margin-top: 15px;
+	padding: 3px 0 3px 20px;
+    width: 250px;
+    height: 30px;
+	font-size: 15px;
+	text-align: center;
+	font-family: Andale Mono, monospace;
+    
+}
+
+.input-btn {
+	width: 110px;
+	height: 35px;
+    margin-top: 15px;
+	padding: 3px;
+	text-align: center;
+	font-size: 16px;
+	font-family: Andale Mono, monospace;
+	color: rebeccapurple;
+	background-color: rgba(176, 224, 230, 1);
+	font-style: bold;
+	border: none;
+	border-radius: 5px;
+
+}
+
+.input-btn:hover{
+	width: 120px;
+	
+	background-color: rgba(176, 224, 230, 1);
+	/*font-size: 22px;*/
+}
+
+.text {
+	text-align: center;
+	font-family: Andale Mono, monospace;
+	color: white;
+}
+
+.margin-zero{
+	margin-top: 0;
+	padding: 0;
+}
+ 
+ul li{
+    list-style-type: none;
+    color: white;
+    font-family: Andale Mono, monospace;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+
+a:hover{
+	color: orange;
+	text-decoration: underline powderblue;
+}

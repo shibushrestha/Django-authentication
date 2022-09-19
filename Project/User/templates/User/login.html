@@ -1,0 +1,26 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'User/login.css' %}">
+
+<form class="login-form" action="{% url 'User:login' %}" method="post">
+    {% csrf_token %}
+    <h1 class="h_style">Login</h1>
+    {{ form.non_field_errors }}
+    {{ form.username}}
+    {{ form.password }}<br>
+    <input class="input-btn" type="submit" value="Login">
+
+    <br>
+    <p class="text">Or login with the following accounts.</p>
+    
+    <a href="#" class="btng">Log in with Gmail</a>
+    <a href="#" class="btnf">Log in with Facebook</a><br>
+    
+    <p class="text">Don't have an account?<a class="link" href="{% url 'User:register' %}">Create an account</a></p>
+
+</form>
+
+<script>
+    document.getElementById("id_username").placeholder = "Username";
+    document.getElementById("id_password").placeholder = "Enter password";
+</script>

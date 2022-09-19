@@ -1,0 +1,9 @@
+<h3>You are at the profile page.</h3>
+
+<p>{{ user.get_username }}</p>
+<p>{{ user.first_name }}</p>
+<p>{{ user.last_name }}</p>
+<p>{{ user.email }}</p>
+<a href="{% url 'User:changepassword' user.username %}">Change password</a><br>
+
+<a href="{% url 'User:logout' user.username %}">Logout</a>

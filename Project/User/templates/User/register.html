@@ -1,0 +1,30 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'User/register.css' %}">
+<form class="container" action="{% url 'User:register' %}" method="post" novalidate>
+    {% csrf_token %}
+    <h2 class="h-style">Create an Account</h2><br>
+        
+        {{ form.errors.username }}
+        {{ form.username }}
+
+        {{ form.errors.first_name }}
+        {{ form.first_name }}
+
+        {{ form.errors.last_name }}
+        {{ form.last_name }}
+        
+        {{ form.errors.email }}
+        {{ form.email }}
+
+        {{ form.errors.password }}
+        {{ form.password }}
+        {{ form.errors.password2 }}
+        {{ form.password2 }}
+        {{ form.non_field_errors }}
+
+
+    <input class="input-btn" type="submit" value="Sign Up">
+    <br><br>
+    <p class="text">Already have an account?<a href="{% url 'User:login' %}">Login</a></p>
+</form>
+

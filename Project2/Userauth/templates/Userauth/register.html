@@ -1,0 +1,25 @@
+{% extends 'Userauth/main.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Userauth/register.css'%}">
+
+<form class="container" action="/Userauth/register/" method="post" novalidate>
+    {% csrf_token %}
+    <h2 class="h-style">Create an Account</h2><br>
+    {{ form.errors.username }}
+    {{ form.username }}
+    {{ form.first_name }}
+    {{ form.last_name }}
+    {{ form.errors.email }}
+    {{ form.email }}
+    {{ form.errors.password2 }}
+    {{ form.password1 }}
+    {{ form.password2 }}
+
+    <input class="input-btn" type="submit" value="Sign Up">
+    <br><br>
+    <p class="text">Already have an account?<a href="/Userauth/login/">Login</a></p>
+</form>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+
+{% if request.user.is_authenticated %}
+    <a href="{% url 'User:userprofile' request.user.username %}">{{ request.user.username }}</a>
+{% else %}
+    <a href="{% url 'User:register' %}">Register</a>
+    <a href="{% url 'User:login' %}">Login</a>
+{% endif %}
+
+<h3>You are at the home page.<h3/>
